@@ -23,8 +23,8 @@ window.onload = function () {
     image.setAttribute("src", "./jpegs/single_1" + number + ".jpg");
     image.setAttribute("alt", "RCA 2023 identity");
     image.setAttribute("rel", "preload");
-    i > 0 ? image.classList.add("hide") : image.classList.add("show");
     identity.appendChild(image);
+    i > 0 ? (image.style.zIndex = 0) : (image.style.zIndex = 1);
   }
 
   const elements = [...identity.children];
@@ -36,21 +36,20 @@ window.onload = function () {
     let width = identity.offsetWidth;
     let frame = Math.floor((scrollPos / width) * totalImages);
 
-    let seekFrame = frame > totalImages - 1 ? totalImages - 1 : frame;
+    let seekFrame =
+      frame > totalImages - 1 ? totalImages - 1 : frame > 0 ? frame : 0;
     // if (frame > totalImages - 1) frame = totalImages - 1;
-    // console.log(seekFrame);
+    // console.log(scrollPos);
     for (let i = 0; i < totalImages; i++) {
       if (i === seekFrame) {
-        elements[i].classList.add("show");
-        elements[i].classList.remove("hide");
+        elements[i].style.zIndex = 1;
       } else {
-        elements[i].classList.add("hide");
-        elements[i].classList.remove("show");
+        elements[i].style.zIndex = 0;
       }
     }
     if (scrollPos >= width) {
       let pos = scrollPos - width;
-      console.log(pos);
+      //   console.log(pos);
       identity.style.top = -pos + "px";
     } else {
       identity.style.top = "0px";
