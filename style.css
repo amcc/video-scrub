@@ -1,0 +1,11 @@
+body {
+  font-family: system-ui;
+  background: #fff;
+  color: black;
+}
+.video-container {
+  width:100%;
+}
+.video-container video {
+  width:100%;
+}
