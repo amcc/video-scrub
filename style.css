@@ -3,9 +3,18 @@ body {
   background: #fff;
   color: black;
 }
-.video-container {
-  width:100%;
+
+.hide {
+  display: none;
 }
-.video-container video {
-  width:100%;
+.show {
+  display: block;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+#container {
+  min-width: 100%;
+  min-height: 100vh;
 }
