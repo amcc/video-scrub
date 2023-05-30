@@ -1,8 +1,12 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: system-ui;
   background: #fff;
   color: black;
-  height: 1000vh;
 }
 
 .hide {
@@ -16,6 +20,9 @@ img {
   height: auto;
 }
 #identity-container {
+  /* height: 1000vh; */
+}
+#identity {
   position: fixed;
   top: 0;
   min-width: 100%;
