@@ -22,6 +22,7 @@ window.onload = function () {
 
     image.setAttribute("src", "./jpegs/single_1" + number + ".jpg");
     image.setAttribute("alt", "RCA 2023 identity");
+    image.setAttribute("rel", "preload");
     i > 0 ? image.classList.add("hide") : image.classList.add("show");
     identity.appendChild(image);
   }
@@ -37,7 +38,7 @@ window.onload = function () {
 
     let seekFrame = frame > totalImages - 1 ? totalImages - 1 : frame;
     // if (frame > totalImages - 1) frame = totalImages - 1;
-    console.log(scrollPos);
+    // console.log(seekFrame);
     for (let i = 0; i < totalImages; i++) {
       if (i === seekFrame) {
         elements[i].classList.add("show");
