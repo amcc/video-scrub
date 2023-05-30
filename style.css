@@ -2,6 +2,7 @@ body {
   font-family: system-ui;
   background: #fff;
   color: black;
+  height: 1000vh;
 }
 
 .hide {
@@ -14,7 +15,9 @@ img {
   width: 100%;
   height: auto;
 }
-#container {
+#identity-container {
+  position: fixed;
+  top: 0;
   min-width: 100%;
   min-height: 100vh;
 }
