@@ -3,6 +3,7 @@ const totalImages = 61;
 function calcDims(identity, container) {
   let width = identity.offsetWidth;
   container.style.height = width * 2 + "px";
+  container.style.marginBottom = width / 2.7 + "px";
 }
 
 window.onresize = function () {
@@ -47,13 +48,13 @@ window.onload = function () {
         elements[i].style.zIndex = 0;
       }
     }
-    if (scrollPos >= width) {
-      let pos = scrollPos - width;
-      //   console.log(pos);
-      identity.style.top = -pos + "px";
-    } else {
-      identity.style.top = "0px";
-    }
+    // if (scrollPos >= width) {
+    //   let pos = scrollPos - width;
+    //   //   console.log(pos);
+    //   identity.style.top = -pos + "px";
+    // } else {
+    //   identity.style.top = "0px";
+    // }
   }
 
   document.addEventListener("scroll", (event) => {

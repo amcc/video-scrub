@@ -21,9 +21,10 @@ img {
 }
 #identity-container {
   /* height: 1000vh; */
+  min-height: 100vh;
 }
 #identity {
-  position: fixed;
+  position: sticky;
   top: 0;
   min-width: 100%;
   min-height: 100vh;
